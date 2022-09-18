@@ -139,9 +139,9 @@ The steering errors were not diverged well and overshoot but doesn't go crazy an
 ![chart2](chart2.png)
 
 #### - What is the effect of the PID according to the plots, how each part of the PID affects the control command?
-P keeps the vehicle go toward the target steer and velocity. 
-D prevents overshooting and make vehicle run more smoothly.
-I reduces the bias by looking them in long term.
+- P keeps the vehicle go toward the target steer and velocity. 
+- D prevents overshooting and make vehicle run more smoothly.
+- I reduces the bias by looking them in long term.
 
 #### - How would you design a way to automatically tune the PID parameters?
 In the course, I learned twiddle which looks promising to tuhe the PID parameters automatically.
