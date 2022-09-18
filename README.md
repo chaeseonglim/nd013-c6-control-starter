@@ -131,23 +131,24 @@ A screenshot at the destination
 
 
 ### Answers
-- Add the plots to your report and explain them (describe what you see)
+#### - Add the plots to your report and explain them (describe what you see)
 Charts from plot_pid.py
 The throttle errors were being stable and reduced the gap as time goes. 
 The steering errors were not diverged well and overshoot but doesn't go crazy and try to find the direction. 
 ![chart1](chart1.png)
 ![chart2](chart2.png)
 
-- What is the effect of the PID according to the plots, how each part of the PID affects the control command?
-Throttle PID helps the velocity of vehicle to be controlled safely.
-Steering PID helps the car goes to the right direction.
+#### - What is the effect of the PID according to the plots, how each part of the PID affects the control command?
+P keeps the vehicle go toward the target steer and velocity. 
+D prevents overshooting and make vehicle run more smoothly.
+I reduces the bias by looking them in long term.
 
-- How would you design a way to automatically tune the PID parameters?
+#### - How would you design a way to automatically tune the PID parameters?
 In the course, I learned twiddle which looks promising to tuhe the PID parameters automatically.
 
-- PID controller is a model free controller, i.e. it does not use a model of the car. Could you explain the pros and cons of this type of controller?
-Pros:
+#### - PID controller is a model free controller, i.e. it does not use a model of the car. Could you explain the pros and cons of this type of controller?
+##### Pros:
 1. It's computationally cheaper than a model based controller.
 2. It's easy to develop
-Cons:
+##### Cons:
 1. It's hard to get a good result. Need many trials.
