@@ -116,3 +116,38 @@ Answer the following questions:
 - If the simulation freezes on the desktop mode but is still running on the terminal, close the desktop and restart it.
 - When you will be tuning the PID parameters, try between those values:
 
+
+## Student Report
+
+### Step1:
+Run the simulator and see in the desktop mode the car in the CARLA simulator. Take a screenshot and add it to your report. The car should not move in the simulation.
+
+![image](step1.png)
+
+### Step4:
+
+A screenshot at the destination
+![image2](final_step.png)
+
+
+### Answers
+- Add the plots to your report and explain them (describe what you see)
+Charts from plot_pid.py
+The throttle errors were being stable and reduced the gap as time goes. 
+The steering errors were not diverged well and overshoot but doesn't go crazy and try to find the direction. 
+![chart1](chart1.png)
+![chart2](chart2.png)
+
+- What is the effect of the PID according to the plots, how each part of the PID affects the control command?
+Throttle PID helps the velocity of vehicle to be controlled safely.
+Steering PID helps the car goes to the right direction.
+
+- How would you design a way to automatically tune the PID parameters?
+In the course, I learned twiddle which looks promising to tuhe the PID parameters automatically.
+
+- PID controller is a model free controller, i.e. it does not use a model of the car. Could you explain the pros and cons of this type of controller?
+Pros:
+1. It's computationally cheaper than a model based controller.
+2. It's easy to develop
+Cons:
+1. It's hard to get a good result. Need many trials.
